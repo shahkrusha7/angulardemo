@@ -1,0 +1,36 @@
+<h1>Student Form</h1>
+<div align="center">
+<form id="studentform" (ngSubmit)="onSubmit()">
+  <label for="name">Name:</label>
+  <input type="text" id="name" placeholder="Enter name" [(ngModel)]="name" name="name" required><br>
+
+  <label for="age">Age:</label>
+  <input type="text" id="age" placeholder="Enter age" [(ngModel)]="age" name="age" required><br>
+
+  <label for="gender">Gender:</label>
+  <input type="text" id="gender" placeholder="Enter gender" [(ngModel)]="gender" name="gender" required><br>
+
+  <label for="city">City:</label>
+  <input type="text" id="city" placeholder="Enter city" [(ngModel)]="city" name="city" required><br>
+
+  <button type="reset">Reset</button>
+  <button type="submit">Submit</button>
+</form>
+</div>
+<h1>Student Details Table</h1>
+<div>
+  <table class="table table-bordered">
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Gender</th>
+      <th>City</th>
+    </tr>
+    <tr *ngFor="let student of students">
+      <td>{{ student.name }}</td>
+      <td>{{ student.age }}</td>
+      <td>{{ student.gender }}</td>
+      <td>{{ student.city }}</td>
+    </tr>
+  </table>
+</div>
