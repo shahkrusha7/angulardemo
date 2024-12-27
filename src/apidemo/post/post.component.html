@@ -1,0 +1,17 @@
+<input type="button" value="LoadData" (click)="LoadData()" >
+<table class="table table-bordered">
+  <tr>
+    <th>User ID</th>
+    <th>Id</th>
+    <th>Title</th>
+  </tr>
+
+  @for(post of postService.postlist;track $index)
+  {
+    <tr>
+      <th>{{post.userId}}</th>
+      <th>{{post.id}}</th>
+      <th>{{post.title}}</th>
+    </tr>
+  }
+</table>
