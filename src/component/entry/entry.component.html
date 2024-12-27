@@ -1,0 +1,27 @@
+<div align="center">
+  <form [formGroup]="formgroup" (ngSubmit)="add()" >
+    <table>
+      <tr>
+        <th>Name:</th>
+        <td>
+          <input type="text" class="form-control" formControlName="name">
+        </td>
+      </tr>
+      <tr>
+        <th>Gender:</th>
+        <td>
+          <input type="text" class="form-control" formControlName="gender">
+        </td>
+      </tr>
+      <tr>
+        <th>City:</th>
+        <td>
+          <input type="text" class="form-control" formControlName="city">
+        </td>
+      </tr>
+      <input type="submit" value="Submit" class="btn-outline-light">
+      <input type="reset" value="Reset" class="btn-outline-light">
+    </table>
+  </form>
+</div>
+
